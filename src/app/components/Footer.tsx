@@ -1,8 +1,13 @@
 import Image from 'next/image'
-import {Home as HomeIcon, Search, Library, ChevronRight, ChevronLeft, Play, Shuffle, SkipBack, SkipForward, Repeat, Mic2,ListPlus, MonitorSpeaker, Volume, Maximize2} from 'lucide-react'
+import {Play, Shuffle, SkipBack, SkipForward, Repeat, Mic2,ListPlus, MonitorSpeaker, Volume, Maximize2} from 'lucide-react'
+
 export function Footer(){
+
     return(
-        <footer className='bg-zinc-800 border-t border-zinc-700 px-6 py-6 flex items-center justify-between'>
+        <footer className='
+        md:bg-zinc-800 md:border-t border-zinc-700 px-6 py-6  md:flex items-center justify-between sticky bottom-0
+        sm:bg-zinc-700 sm:rounded-md hidden sm:flex 
+        '>
         <div className='flex itens-center gap-3'>
         <Image src="/albumbsv4.jpg" width={56} height={56} alt="Capa do Album" />
           <div className='flex flex-col'>
@@ -12,15 +17,15 @@ export function Footer(){
         </div>
         <div className='flex flex-col items-center gap-2'>
           <div className='flex items-center gap-4'>
-            <Shuffle size={20} className='text-zinc-200'/>
-            <SkipBack size={20} className='text-zinc-200'/>
+            <Shuffle size={20} className='text-zinc-200 '/>
+            <SkipBack size={20} className='text-zinc-200 '/>
 
             <button className='w-10 h-10 flex items-center justify-center pl-1 rounded-full bg-white text-black'>
               <Play />
             </button>
 
-            <SkipForward size={20} className='text-zinc-200'/>
-            <Repeat size={20} className='text-zinc-200'/>
+            <SkipForward size={20} className='text-zinc-200 '/>
+            <Repeat size={20} className='text-zinc-200 '/>
           </div>
           <div className='flex items-center gap-2'>
             <span className='text-xs text-zinc-400'>0:31</span>
@@ -31,7 +36,7 @@ export function Footer(){
             <span className='text-xs text-zinc-400'>3:21</span>
           </div>
         </div>
-        <div className='flex items-center gap-4'>
+        <div className='md:flex md:items-center gap-4 sm:hidden'>
           <Mic2 size={20}/>
           <ListPlus size={20}/>
           <MonitorSpeaker size={20}/>
