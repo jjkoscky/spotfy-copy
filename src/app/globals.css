@@ -20,3 +20,14 @@
 body {
  
 }
+
+.img-thumb-mini{
+  width: 100px;
+  height: 80px;
+}
+
+.img-thumb-normal{
+  width: 104px;
+  height: 104px;
+}
+

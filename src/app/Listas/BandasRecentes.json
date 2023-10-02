@@ -1,0 +1,55 @@
+[
+    {
+        "banda":"Ramones",
+        "album":"Rocket to Russia",
+        "img":"/ramones.jpg",
+        "classe":""
+    },
+    {
+        "banda":"Nirvana",
+        "album":"Bleach",
+        "img":"/bleach.jpg",
+        "classe":""
+    },
+    {
+        "banda":"The Smashing Pumpkins",
+        "texto":"Artista",
+        "img":"/sp.jpg",
+        "classe":"rounded-full"
+    },
+    {
+        "banda":"Weezer",
+        "album":"Blue Album",
+        "img":"/weezeralbum.jpg",
+        "classe":""
+        
+    },
+    {
+        "banda":"Asian Kung Fu Generation",
+        "texto":"Artista",
+        "img":"/akg.jpg",
+        "classe":"rounded-full"
+        
+    },
+    {
+        "banda":"Nirvana",
+        "texto":"Artista",
+        "img":"/nirvanacapa.jpg",
+        "classe":"rounded-full"
+        
+    },
+    {
+        "banda":"Black Sabbath",
+        "album":"Vol. 4",
+        "img":"/albumbsv4.jpg",
+        "classe":""
+        
+    },
+    {
+        "banda":"Sex Pistols",
+        "texto":"Artista",
+        "img":"/sexpistolscapa.jpg",
+        "classe":"rounded-full"
+        
+    }
+]

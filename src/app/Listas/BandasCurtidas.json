@@ -1,0 +1,30 @@
+[
+    {
+        "img": "/albumbsv4.jpg",
+        "album":"Vol. 4",
+        "Banda":"Black Sabbath"
+        
+    },
+    {
+        "img": "/avrilalbum.jpg",
+        "album":"Let go"
+    },
+    {
+        "img": "/bleach.jpg",
+        "album":"Bleach"
+        
+    },
+    {
+        "img": "/ramones.jpg",
+        "album":"Roket To Russia"
+        
+    },
+
+    {
+        "img": "/weezeralbum.jpg",
+        "album":"Blue Album"
+        
+    }
+    
+
+]

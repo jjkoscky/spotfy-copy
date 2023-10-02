@@ -2,6 +2,9 @@ import Image from 'next/image'
 import {  ChevronRight, ChevronLeft} from 'lucide-react'
 import ListTop from './List_top'
 import PlayIcon from './Icons/PlayIcon'
+import ListaBandasRecentes from '../Listas/BandasRecentes.json'
+import ListaDaily from '../Listas/BandasDaily.json'
+import ListaSugeridos from '../Listas/BandasSugeridas.json'
 
 
 export default function ContentMain(){
@@ -21,82 +24,22 @@ export default function ContentMain(){
             <ListTop />
 
             <div className='flex'>
-                <h1 className='font-xs font-semibold sm:text-base md:text-3xl mt-10'>Recently Played</h1>
+                <h1 className='font-xs font-semibold md:text-base 2xl:text-3xl mt-10'>Recently Played</h1>
                 <a href='#' className=' ml-auto mt-12 font-semibold uppercase text-sm hover:underline sm:text-xs md:text-xs'>Ver tudo</a>
             </div>
             
-            <div className='grid grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-4 mt-4'>
-            <a href="" className='bg-white/5 p-3 group overflow-hidden rounded-md hover:bg-white/10 transition-colors'>
-                <button className='w-12 h-12 flex absolute ml-[105px] mt-24 items-center justify-center rounded-full bg-green-400 text-black invisible group-hover:visible'>
-                    <PlayIcon />
-                </button>
-                <Image className='w-full' src="/ramones.jpg" width={300} height={300} alt="Capa do Album" />
-                <strong className='font-semibold'>Rocket to Russia </strong>
-                <span className='text-sm text-zinc-400 flex'>Ramones</span>
-            </a>
-
-            <a href="" className='bg-white/5 p-3 group rounded-md hover:bg-white/10 flex flex-col'>
-                <button className='w-12 h-12 flex absolute ml-[105px] mt-24 items-center justify-center rounded-full bg-green-400 text-black invisible group-hover:visible'>
-                    <PlayIcon />
-                </button> 
-                <Image className='w-full' src="/bleach.jpg" width={300} height={300} alt="Capa do Album" />
-                <strong className='font-semibold'>Bleach </strong>
-                <span className='text-sm text-zinc-400'>Nirvana</span>
-            </a>
-
-            <a href="" className='bg-white/5 p-3 group rounded-md hover:bg-white/10 flex flex-col'>
-                <button className='w-12 h-12 flex absolute ml-[105px] mt-24 items-center justify-center rounded-full bg-green-400 text-black invisible group-hover:visible'>
-                    <PlayIcon />
-                </button> 
-                <Image className='w-full rounded-full' src="/sp.jpg" width={300} height={300} alt="Capa do Album" />
-                <strong className='font-semibold'>The Smashing Pumpkins</strong>
-                <span className='text-sm text-zinc-400 '>Artista</span>
-            </a>  
-
-            <a href="" className='bg-white/5 p-3 group rounded-md hover:bg-white/10 flex flex-col'>
-                <button className='w-12 h-12 flex absolute ml-[105px] mt-24 items-center justify-center rounded-full bg-green-400 text-black invisible group-hover:visible'>
-                    <PlayIcon />
-                </button> 
-                <Image className='w-full' src="/weezeralbum.jpg" width={300} height={300} alt="Capa do Album" />
-                <strong className='font-semibold'>Blue Album</strong>
-                <span className='text-sm text-zinc-400 hover:underline'>Weezere</span>
-            </a>  
-
-            <a href="" className='bg-white/5 p-3 group rounded-md hover:bg-white/10 flex flex-col'>
-                <button className='w-12 h-12 flex absolute ml-[105px] mt-24 items-center justify-center rounded-full bg-green-400 text-black invisible group-hover:visible'>
-                    <PlayIcon />
-                </button>    
-                <Image className='w-full rounded-full' src="/akg.jpg" width={300} height={300} alt="Capa do Album" />
-                <strong className='font-semibold'>Asian Kung Fu Generation</strong>
-                <span className='text-sm text-zinc-400 '>Artista</span>
-            </a>
-
-            <a href="" className='bg-white/5 p-3 group rounded-md hover:bg-white/10 flex flex-col'>
-                <button className='w-12 h-12 flex absolute ml-[105px] mt-24 items-center justify-center rounded-full bg-green-400 text-black invisible group-hover:visible'>
-                    <PlayIcon />
-                </button> 
-                <Image className='w-full rounded-full' src="/nirvanacapa.jpg" width={300} height={300} alt="Capa do Album" />
-                <strong className='font-semibold'>Nirvana</strong>
-                <span className='text-sm text-zinc-400 '>Artista</span>
-            </a>
-
-            <a href="" className='bg-white/5 p-3 group rounded-md hover:bg-white/10 flex flex-col'>
-                <button className='w-12 h-12 flex absolute ml-[105px] mt-24 items-center justify-center rounded-full bg-green-400 text-black invisible group-hover:visible'>
-                    <PlayIcon />
-                </button> 
-                <Image className='w-full' src="/albumbsv4.jpg" width={300} height={300} alt="Capa do Album" />
-                <strong className='font-semibold'>Vol. 4</strong>
-                <span className='text-sm text-zinc-400 hover:underline'>Black Sabbath</span>
-            </a>
-
-            <a href="" className='bg-white/5 p-3 group rounded-md hover:bg-white/10 flex flex-col'>
-                <button className='w-12 h-12 flex absolute ml-[105px] mt-24 items-center justify-center rounded-full bg-green-400 text-black invisible group-hover:visible'>
-                    <PlayIcon />
-                </button> 
-                <Image className='w-full rounded-full' src="/sexpistolscapa.jpg" width={300} height={300} alt="Capa do Album" />
-                <strong className='font-semibold'>Sex Pistols</strong>
-                <span className='text-sm text-zinc-400 '>Artista</span>
-            </a>
+            <div className='grid grid-cols-3 lg:grid-cols-4 2xl:grid-cols-8 gap-4 mt-4'>
+            {ListaBandasRecentes.map( (item, i) => (
+                <a href="" className='bg-white/5 p-3 group overflow-hidden rounded-md hover:bg-white/10 transition-colors'>
+                    <button className='hidden w-12 h-12 2xl:flex absolute ml-[105px] mt-24 items-center justify-center rounded-full bg-green-400 text-black invisible group-hover:visible' key={i}>
+                        <PlayIcon />
+                    </button>
+                    <Image className={` w-full ${item.classe} `} src={item.img} width={300} height={300} alt="Capa do Album" />
+                    <strong className='text-sm lg:text-base font-semibold '>{item.album}</strong>
+                    <span className='text-xs lg:text-sm text-zinc-400 flex '>{item.banda}</span>
+                </a>
+            ))}
+            
             </div>
 
             <div className='flex'>
@@ -105,60 +48,18 @@ export default function ContentMain(){
             </div>
 
 
-            <div className='grid grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-4 mt-4'>
-              <a href="" className='bg-white/5 p-3 group rounded-md hover:bg-white/10 flex flex-col'>
-                <button className='w-12 h-12 flex absolute ml-[105px] mt-24 items-center justify-center rounded-full bg-green-400 text-black invisible group-hover:visible'>
-                    <PlayIcon />
-                </button>  
-                <Image className='w-full' src="/dailymix1.jpg" width={300} height={300} alt="Capa do Album" />
-                <strong className='font-semibold'>Daily Mix 1</strong>
-                <span className='text-sm text-zinc-400 '>David Bowie, Queen, The Ronlling Stones</span>
-            </a>
-
-            <a href="" className='bg-white/5 p-3 group rounded-md hover:bg-white/10 flex flex-col'>
-                <button className='w-12 h-12 flex absolute ml-[105px] mt-24 items-center justify-center rounded-full bg-green-400 text-black invisible group-hover:visible'>
-                    <PlayIcon />
-                </button>  
-                <Image className='w-full' src="/dailymix2.jpg" width={300} height={300} alt="Capa do Album" />
-                <strong className='font-semibold'>Daily Mix 2</strong>
-                <span className='text-sm text-zinc-400 '>Charlie Brown Jr, CPM 22, Pitty  </span>
-            </a>
-
-            <a href="" className='bg-white/5 p-3 group rounded-md hover:bg-white/10 flex flex-col'>
-                <button className='w-12 h-12 flex absolute ml-[105px] mt-24 items-center justify-center rounded-full bg-green-400 text-black invisible group-hover:visible'>
-                    <PlayIcon />
-                </button>  
-                <Image className='w-full' src="/dailymix3.jpg" width={300} height={300} alt="Capa do Album" />
-                <strong className='font-semibold'>Daily Mix 3</strong>
-                <span className='text-sm text-zinc-400 '>Slipknot, Linkin Park, Paparochi</span>
-            </a>
-
-            <a href="" className='bg-white/5 p-3 group rounded-md hover:bg-white/10 flex flex-col'>
-                <button className='w-12 h-12 flex absolute ml-[105px] mt-24 items-center justify-center rounded-full bg-green-400 text-black invisible group-hover:visible'>
-                    <PlayIcon />
-                </button>  
-                <Image className='w-full' src="/dailymix4.jpg" width={300} height={300} alt="Capa do Album" />
-                <strong className='font-semibold'>Daily Mix 4</strong>
-                <span className='text-sm text-zinc-400 '>Red Hot Chili Paper, Foo Fighters, Oasis</span>
-            </a>
-
-            <a href="" className='bg-white/5 p-3 group rounded-md hover:bg-white/10 flex flex-col '>
-                <button className='w-12 h-12 flex absolute ml-[105px] mt-24 items-center justify-center rounded-full bg-green-400 text-black invisible group-hover:visible'>
-                    <PlayIcon />
-                </button>  
-                <Image className='w-full' src="/dailymix5.jpg" width={300} height={300} alt="Capa do Album" />
-                <strong className='font-semibold'>Daily Mix 5</strong>
-                <span className='text-sm text-zinc-400 '>The Offspring, Ramones, Green Day, Lagwagon</span>
-            </a>
-
-            <a href="" className='bg-white/5 p-3 group rounded-md hover:bg-white/10 flex flex-col '>
-                <button className='w-12 h-12 flex absolute ml-[105px] mt-24 items-center justify-center rounded-full bg-green-400 text-black invisible group-hover:visible'>
-                    <PlayIcon />
-                </button>  
-                <Image className='w-full' src="/bestof80.jpg" width={300} height={300} alt="Capa do Album" />
-                <strong className='font-semibold'>Top Hits 1980</strong>
-                <span className='text-sm text-zinc-400 '>The Offspring, Ramones, Green Day, Lagwagon</span>
-            </a>
+            <div className='grid grid-cols-3 lg:grid-cols-4 2xl:grid-cols-8 gap-4 mt-4'>
+            {ListaDaily.map( (item, i) => (
+                <a href="" className='bg-white/5 p-3 group rounded-md hover:bg-white/10 flex flex-col' key={i}>
+                    <button className='hidden w-12 h-12 2xl:flex absolute ml-[105px] mt-24 items-center justify-center rounded-full bg-green-400 text-black invisible group-hover:visible'>
+                        <PlayIcon />
+                    </button>  
+                    <Image className='w-full' src={item.img} width={300} height={300} alt="Capa do Album" />
+                    <strong className='text-sm lg:text-base font-semibold'>{item.titulo}</strong>
+                    <span className='text-xs lg:text-sm text-zinc-400 '>{item.sub}</span>
+                </a>
+            ))}
+            
 
         </div>
         <div className='flex'>
@@ -166,79 +67,18 @@ export default function ContentMain(){
             <a href='#' className=' ml-auto mt-12 font-semibold uppercase text-sm hover:underline sm:text-xs md:text-xs'>Ver tudo</a>
         </div>
         
-        <div className='grid grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-4 mt-4'>
-        <a href="" className='bg-white/5 p-3 group rounded-md hover:bg-white/10 flex flex-col'>
-            <button className='w-12 h-12 flex absolute ml-[105px] mt-24 items-center justify-center rounded-full bg-green-400 text-black invisible group-hover:visible'>
-                <PlayIcon />
-            </button> 
-            <Image className='w-full rounded-full' src="/aliceinchainscapa.jpg" width={300} height={300} alt="Capa do Album" />
-            <strong className='font-semibold'>Alice In Chains </strong>
-            <span className='text-sm text-zinc-400 '>Artista</span>
-        </a>
-
-        <a href="" className='bg-white/5 p-3 group rounded-md hover:bg-white/10 flex flex-col'>
-            <button className='w-12 h-12 flex absolute ml-[105px] mt-24 items-center justify-center rounded-full bg-green-400 text-black invisible group-hover:visible'>
-                <PlayIcon />
-            </button> 
-            <Image className='w-full rounded-full' src="/sexpistolscapa.jpg" width={300} height={300} alt="Capa do Album" />
-            <strong className='font-semibold'>Sex Pistols</strong>
-            <span className='text-sm text-zinc-400 '>Artista</span>
-        </a>
-
-        <a href="" className='bg-white/5 p-3 group rounded-md hover:bg-white/10 flex flex-col'>
-            <button className='w-12 h-12 flex absolute ml-[105px] mt-24 items-center justify-center rounded-full bg-green-400 text-black invisible group-hover:visible'>
-                <PlayIcon />
-            </button> 
-            <Image className='w-full rounded-full' src="/metallicacapa.jpg" width={300} height={300} alt="Capa do Album" />
-            <strong className='font-semibold'>Metallica</strong>
-            <span className='text-sm text-zinc-400 '>Artista</span>
-        </a> 
-
-        <a href="" className='bg-white/5 p-3 group rounded-md hover:bg-white/10 flex flex-col'>
-            <button className='w-12 h-12 flex absolute ml-[105px] mt-24 items-center justify-center rounded-full bg-green-400 text-black invisible group-hover:visible'>
-                <PlayIcon />
-            </button> 
-            <Image className='w-full rounded-full' src="/sgcapa.jpg" width={300} height={300} alt="Capa do Album" />
-            <strong className='font-semibold'>Sondgarden</strong>
-            <span className='text-sm text-zinc-400 '>Artista</span>
-        </a>
-
-        <a href="" className='bg-white/5 p-3 group rounded-md hover:bg-white/10 flex flex-col'>
-            <button className='w-12 h-12 flex absolute ml-[105px] mt-24 items-center justify-center rounded-full bg-green-400 text-black invisible group-hover:visible'>
-                <PlayIcon />
-            </button> 
-            <Image className='w-full rounded-full' src="/pixiescapa.jpg" width={300} height={300} alt="Capa do Album" />
-            <strong className='font-semibold'>Pixies</strong>
-            <span className='text-sm text-zinc-400 '>Artista</span>
-        </a>
-
-        <a href="" className='bg-white/5 p-3 group rounded-md hover:bg-white/10 flex flex-col'>
-            <button className='w-12 h-12 flex absolute ml-[105px] mt-24 items-center justify-center rounded-full bg-green-400 text-black invisible group-hover:visible'>
-                <PlayIcon />
-            </button> 
-            <Image className='w-full rounded-full' src="/ffcapa.jpg" width={300} height={300} alt="Capa do Album" />
-            <strong className='font-semibold'>Foo Fighters</strong>
-            <span className='text-sm text-zinc-400 '>Artista</span>
-        </a>
-
-        <a href="" className='bg-white/5 p-3 group rounded-md hover:bg-white/10 flex flex-col'>
-            <button className='w-12 h-12 flex absolute ml-[105px] mt-24 items-center justify-center rounded-full bg-green-400 text-black invisible group-hover:visible'>
-                <PlayIcon />
-            </button> 
-            <Image className='w-full rounded-full' src="/thedistilerscapa.jpg" width={300} height={300} alt="Capa do Album" />
-            <strong className='font-semibold'>The Distilers</strong>
-            <span className='text-sm text-zinc-400 '>Artista</span>
-        </a>
-
-        <a href="" className='bg-white/5 p-3 group rounded-md hover:bg-white/10 flex flex-col'>
-            <button className='w-12 h-12 flex absolute ml-[105px] mt-24 items-center justify-center rounded-full bg-green-400 text-black invisible group-hover:visible'>
-                <PlayIcon />
-            </button> 
-            <Image className='w-full rounded-full' src="/stpcapa.jpg" width={300} height={300} alt="Capa do Album" />
-            <strong className='font-semibold'>Stone Temple Pistols</strong>
-            <span className='text-sm text-zinc-400 '>Artista</span>
-        </a>
-
+        <div className='grid grid-cols-3 lg:grid-cols-4 2xl:grid-cols-8 gap-4 mt-4'>
+        {ListaSugeridos.map( (item, i) => (    
+            <a href="#" className='bg-white/5 p-3 group rounded-md hover:bg-white/10 flex flex-col' key={i}>
+                <button className='hidden w-12 h-12 2xl:flex absolute ml-[105px] mt-24 items-center justify-center rounded-full bg-green-400 text-black invisible group-hover:visible'>
+                    <PlayIcon />
+                </button> 
+                <Image className='w-full rounded-full' src={item.img} width={300} height={300} alt="Capa do Album" />
+                <strong className='text-sm lg:text-base font-semibold'>{item.banda}</strong>
+                <span className='text-xs lg:text-base text-zinc-400 '>Artista</span>
+            </a>
+        ))}
+        
         </div>
     </main>
     )

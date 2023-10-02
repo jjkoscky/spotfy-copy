@@ -1,0 +1,33 @@
+[
+    {
+        "titulo":"Daily Mix 1",
+        "sub":"David Bowie, Queen, The Ronlling Stones",
+        "img":"/dailymix1.jpg"
+    },
+    {
+        "titulo":"Daily Mix 2",
+        "sub":"Charlie Brown Jr, CPM 22, Pitty",
+        "img":"/dailymix2.jpg"
+    },
+    {
+        "titulo":"Daily Mix 3",
+        "sub":"Slipknot, Linkin Park, Paparochi",
+        "img":"/dailymix3.jpg"
+    },
+    {
+        "titulo":"Daily Mix 4",
+        "sub":"Red Hot Chili Paper, Foo Fighters, Oasis",
+        "img":"/dailymix4.jpg"
+    },
+    {
+        "titulo":"Daily Mix 5",
+        "sub":"The Offspring, Ramones, Green Day, Lagwagon",
+        "img":"/dailymix5.jpg"
+    },
+    {
+        "titulo":"Top Hits 1980",
+        "sub":"Quee, The Smiths, The Cure",
+        "img":"/bestof80.jpg"
+    }
+    
+]

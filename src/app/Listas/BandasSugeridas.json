@@ -1,0 +1,35 @@
+[
+    {
+        "banda":"Alice In Chains ",
+        "img":"/aliceinchainscapa.jpg"  
+    },
+
+    {
+        "banda":"Sex Pistols ",
+        "img":"/sexpistolscapa.jpg"  
+    },
+    {
+        "banda":"Metallica",
+        "img":"/metallicacapa.jpg"  
+    },
+    {
+        "banda":"Sondgarden",
+        "img":"/sgcapa.jpg"  
+    },
+    {
+        "banda":"Pixies",
+        "img":"/pixiescapa.jpg"  
+    },
+    {
+        "banda":"Foo Fighters",
+        "img":"/ffcapa.jpg"  
+    },
+    {
+        "banda":"The Distilers",
+        "img":"/thedistilerscapa.jpg"  
+    },
+    {
+        "banda":"Stone Temple Pistols",
+        "img":"/stpcapa.jpg"  
+    }
+]
