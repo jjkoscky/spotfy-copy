@@ -45,7 +45,7 @@ export function Sidebar(){
                 <a href="" className='txt-sm text-zinc-400 hover:text-zinc-100 cursor-default'>Japanense Bands </a>
                 <a href="" className='txt-sm text-zinc-400 hover:text-zinc-100 cursor-default'>Mexican Bands </a>
                 <a href="" className='txt-sm text-zinc-400 hover:text-zinc-100 cursor-default'>Australian Bands </a>
-                <a href="" className='txt-sm text-zinc-400 hover:text-zinc-100 cursor-default'>Rock 80'</a>
+                <a href="" className='txt-sm text-zinc-400 hover:text-zinc-100 cursor-default'>Rock 80s</a>
                 <a href="" className='txt-sm text-zinc-400 hover:text-zinc-100 cursor-default'>Pos Punk Goth</a>
                 <a href="" className='txt-sm text-zinc-400 hover:text-zinc-100 cursor-default'>Rock & Roll</a>
                 <a href="" className='txt-sm text-zinc-400 hover:text-zinc-100 cursor-default'>Funk miami</a>
