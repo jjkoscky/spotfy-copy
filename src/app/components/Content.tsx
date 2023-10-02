@@ -30,8 +30,9 @@ export default function ContentMain(){
             
             <div className='grid grid-cols-3 lg:grid-cols-4 2xl:grid-cols-8 gap-4 mt-4'>
             {ListaBandasRecentes.map( (item, i) => (
-                <a href="" className='bg-white/5 p-3 group overflow-hidden rounded-md hover:bg-white/10 transition-colors'>
-                    <button className='hidden w-12 h-12 2xl:flex absolute ml-[105px] mt-24 items-center justify-center rounded-full bg-green-400 text-black invisible group-hover:visible' key={i}>
+                
+                <a href="" className='bg-white/5 p-3 group overflow-hidden rounded-md hover:bg-white/10 transition-colors' key={i}>
+                    <button className='hidden w-12 h-12 2xl:flex absolute ml-[105px] mt-24 items-center justify-center rounded-full bg-green-400 text-black invisible group-hover:visible'>
                         <PlayIcon />
                     </button>
                     <Image className={` w-full ${item.classe} `} src={item.img} width={300} height={300} alt="Capa do Album" />
